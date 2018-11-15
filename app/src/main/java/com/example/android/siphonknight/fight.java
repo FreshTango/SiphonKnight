@@ -1,6 +1,7 @@
 package com.example.android.siphonknight;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class fight extends AppCompatActivity {
+public class fight extends MainActivity {
 
     protected TextView bossHealthVal;
     protected TextView playerHealthVal;
@@ -48,12 +49,15 @@ public class fight extends AppCompatActivity {
     //Bosses
     TrainingDummy trainingDummy = new TrainingDummy();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fight);
 
+        music.stop();
+        music.reset();
+        music = MediaPlayer.create(getApplicationContext(), R.raw.battle01);
+        music.start();
 
         playerLevelText = findViewById(R.id.playerLevel);
         bossLevel = findViewById(R.id.bossLevel);
@@ -69,14 +73,14 @@ public class fight extends AppCompatActivity {
         defenseButton = findViewById(R.id.defenseButton);
 
         // Abilities
-        siphoningSlash = findViewById(R.id.siphoningSlash);
-        enragedFlurry = findViewById(R.id.enragedFlurry);
-        venomousStab = findViewById(R.id.venomousStab);
-        sacrificialMight = findViewById(R.id.sacMight);
-        sacrificialProtection = findViewById(R.id.sacProtect);
-        reverseSweep = findViewById(R.id.reverseSweep);
-        berserk = findViewById(R.id.berserk);
-        vengeance = findViewById(R.id.vengeance);
+//        siphoningSlash = findViewById(R.id.siphoningSlash);
+//        enragedFlurry = findViewById(R.id.enragedFlurry);
+//        venomousStab = findViewById(R.id.venomousStab);
+//        sacrificialMight = findViewById(R.id.sacMight);
+//        sacrificialProtection = findViewById(R.id.sacProtect);
+//        reverseSweep = findViewById(R.id.reverseSweep);
+//        berserk = findViewById(R.id.berserk);
+//        vengeance = findViewById(R.id.vengeance);
 
         gameInit();
         levelInit();

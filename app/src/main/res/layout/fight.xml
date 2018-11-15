@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.siphonknight.fight" >
+    tools:context="com.example.android.siphonknight.fight"
+    android:background="@drawable/grassfield">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +33,7 @@
     <TextView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="440dp"
         android:layout_marginLeft="75dp"
         android:textSize="15dp"
         android:text="ATK:"/>
@@ -40,14 +41,14 @@
         android:id="@+id/attackVal"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="430dp"
         android:layout_marginLeft="140dp"
         android:textSize="25dp"
         android:text="0"/>
     <TextView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="440dp"
         android:layout_marginLeft="225dp"
         android:textSize="15dp"
         android:text="DEF:"/>
@@ -55,21 +56,21 @@
         android:id="@+id/defenseVal"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="430dp"
         android:layout_marginLeft="290dp"
         android:textSize="25dp"
         android:text="0"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="470dp"
         android:layout_marginLeft="30dp"
         android:text="HP:"/>
     <TextView
         android:id="@+id/playerHealthVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="470dp"
         android:layout_marginLeft="120dp"
         android:text="0"/>
     <TextView
@@ -103,97 +104,36 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="350dp"
+        android:paddingTop="500dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:progress="0"
         android:progressBackgroundTint="@color/colorPrimaryDark" />
+
     <Button
         android:id="@+id/attackButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="200dp"
         android:layout_marginLeft="100dp"
-        android:textSize="10dp"
-        android:text="ATTACK"/>
+        android:layout_marginTop="550dp"
+        android:text="ATTACK"
+        android:textSize="10dp" />
+
     <Button
         android:id="@+id/defenseButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="200dp"
         android:layout_marginLeft="225dp"
-        android:textSize="10dp"
-        android:text="DEFEND"/>
-    <Button
-        android:id="@+id/siphoningSlash"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="60dp"
-        android:textSize="10dp"
-        android:text="SIPHONING SLASH"/>
-    <Button
-        android:id="@+id/enragedFlurry"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="160dp"
-        android:textSize="10dp"
-        android:text="ENRAGED FLURRY"/>
-    <Button
-        android:id="@+id/venomousStab"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="260dp"
-        android:textSize="10dp"
-        android:text="VENOMOUS STAB"/>
-    <Button
-        android:id="@+id/sacMight"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="465dp"
-        android:layout_marginLeft="60dp"
-        android:textSize="8dp"
-        android:text="SACRIFICIAL MIGHT"/>
-    <Button
-        android:id="@+id/sacProtect"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="465dp"
-        android:layout_marginLeft="260dp"
-        android:textSize="8dp"
-        android:text="SACRIFICIAL PROTECTION"/>
-    <Button
-        android:id="@+id/reverseSweep"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="60dp"
-        android:textSize="10dp"
-        android:text="REVERSE SWEEP"/>
-    <Button
-        android:id="@+id/berserk"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="160dp"
-        android:textSize="10dp"
-        android:text="BERSERK"/>
-    <Button
-        android:id="@+id/vengeance"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginLeft="260dp"
-        android:textSize="10dp"
-        android:text="VENGEANCE"/>
+        android:layout_marginTop="550dp"
+        android:text="DEFEND"
+        android:textSize="10dp" />
+
     <Button
         android:id="@+id/resetButton"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_marginTop="140dp"
         android:layout_marginLeft="160dp"
-        android:textSize="10dp"
-        android:text="RESET BOSS RUSH"/>
+        android:layout_marginTop="595dp"
+        android:text="RESET BOSS RUSH"
+        android:textSize="10dp" />
 </RelativeLayout>

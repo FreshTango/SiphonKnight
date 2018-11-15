@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class WorldSelect extends AppCompatActivity {
+public class WorldSelect extends MainActivity {
 
     protected String user;
     public Player p = new Player();
@@ -39,6 +39,7 @@ public class WorldSelect extends AppCompatActivity {
         arrayList = new ArrayList<level>();
         arrayList.add(new level("level 1", train));
         arrayList.add(new level("level 2", train));
+        music.stop();
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -47,8 +48,6 @@ public class WorldSelect extends AppCompatActivity {
                 startActivityForResult(myintent, 1);
             }
         });
-
-
 
     }
 }

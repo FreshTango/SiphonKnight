@@ -1,6 +1,8 @@
 package com.example.android.siphonknight;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,12 +15,18 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     protected Toast mainToast;
+    MediaPlayer music;
+    int menuSong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
-
+        menuSong = 1;
+        if (menuSong == 1) {
+            music = MediaPlayer.create(getApplicationContext(), R.raw.menu01);
+            music.start();
+        }
     }
 
     protected void doToast(String message) {
@@ -36,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             this.doToast("No Name Entered");
         } else {
             // XXX Launch TheGame activity
+            menuSong = 0;
             String name = userNameEditText.getText().toString();
             Intent myintent = new Intent(MainActivity.this, WorldSelect.class);
             myintent.putExtra("player", name);
@@ -44,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        music.stop();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }
+
