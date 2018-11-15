@@ -15,6 +15,7 @@ public class Player {
     protected int maxHealth;
     protected int experience;
     protected int maxExperience;
+    protected String name;
     protected String armor;
     protected String weapon;
     protected String trinket;
@@ -36,6 +37,10 @@ public class Player {
         armor = "Apprentice Armor";
         weapon = "Apprentice Sword";
         trinket = "";
+    }
+
+    public void setName(String nam){
+        name = nam;
     }
 
     // Updates the current armor equipped and associated stats.

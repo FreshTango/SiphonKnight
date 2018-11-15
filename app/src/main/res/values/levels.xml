@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="level_names">
+        <item>Level 1</item>
+        <item>Level 2</item>
+    </string-array>
+</resources>

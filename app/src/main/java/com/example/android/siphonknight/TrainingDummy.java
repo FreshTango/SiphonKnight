@@ -4,7 +4,7 @@ package com.example.android.siphonknight;
  * Created by Khiem Tang on 10/22/2018.
  */
 
-public class TrainingDummy {
+public class TrainingDummy implements Boss {
 
     protected int attack;
     protected int defense;
