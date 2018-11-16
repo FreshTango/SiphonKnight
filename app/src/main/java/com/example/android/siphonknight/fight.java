@@ -1,6 +1,7 @@
 package com.example.android.siphonknight;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,16 +11,21 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar;
+import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
+
 public class fight extends MainActivity {
 
     protected TextView bossHealthVal;
+    protected TextView maxBossHealthVal;
     protected TextView playerHealthVal;
+    protected TextView maxPlayerHealthVal;
     protected TextView attackVal;
     protected TextView defenseVal;
     protected TextView playerLevelText;
     protected TextView bossLevel;
-    protected ProgressBar bossHealthBar;
-    protected ProgressBar playerHealthBar;
+    protected RoundCornerProgressBar bossHealthBar;
+    protected RoundCornerProgressBar playerHealthBar;
     protected Button attackButton;
     protected Button defenseButton;
     protected Button siphoningSlash;
@@ -64,11 +70,23 @@ public class fight extends MainActivity {
         resetButton = findViewById(R.id.resetButton);
 
         bossHealthVal = findViewById(R.id.bossHealthVal);
+        maxBossHealthVal = findViewById(R.id.bossMaxHealthVal);
         playerHealthVal = findViewById(R.id.playerHealthVal);
+        maxPlayerHealthVal = findViewById(R.id.playerMaxHealthVal);
         attackVal = findViewById(R.id.attackVal);
         defenseVal = findViewById(R.id.defenseVal);
+
         bossHealthBar = findViewById(R.id.bossHealthBar);
+        //bossHealthBar.setIconImageResource(R.drawable.hpicon);
+        bossHealthBar.setProgressColor(Color.parseColor("#c83b3b"));
+        bossHealthBar.setProgressBackgroundColor(Color.parseColor("#9d2e2e"));
+       // bossHealthBar.setIconBackgroundColor(Color.parseColor("#741515"));
+
         playerHealthBar = findViewById(R.id.playerHealthBar);
+        //playerHealthBar.setIconImageResource(R.drawable.hpicon);
+        playerHealthBar.setProgressColor(Color.parseColor("#0ea65d"));
+        playerHealthBar.setProgressBackgroundColor(Color.parseColor("#097240"));
+       // playerHealthBar.setIconBackgroundColor(Color.parseColor("#00502a"));
         attackButton = findViewById(R.id.attackButton);
         defenseButton = findViewById(R.id.defenseButton);
 
@@ -181,7 +199,9 @@ public class fight extends MainActivity {
         attackVal.setText(Integer.toString(player.attack));
         defenseVal.setText(Integer.toString(player.defense));
         bossHealthVal.setText(Integer.toString(bossHealth));
+        maxBossHealthVal.setText(Integer.toString(maxBossHealth));
         playerHealthVal.setText(Integer.toString(player.health));
+        maxPlayerHealthVal.setText(Integer.toString(player.maxHealth));
         playerHealthBar.setProgress(player.health);
         bossHealthBar.setProgress(bossHealth);
 
