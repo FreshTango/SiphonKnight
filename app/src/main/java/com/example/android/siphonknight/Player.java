@@ -1,12 +1,13 @@
 package com.example.android.siphonknight;
 
+import java.io.Serializable;
 import java.util.Random;
 
 /**
  * Created by Khiem Tang on 10/22/2018.
  */
 
-public class Player {
+public class Player implements Serializable {
 
     protected int level;
     protected int attack;
@@ -36,9 +37,7 @@ public class Player {
     protected String firstSkill;
     protected String secondSkill;
 
-    public Player() {
-        playerInit();
-    }
+    public Player() {}
 
     public void playerInit() {
         //General stats.

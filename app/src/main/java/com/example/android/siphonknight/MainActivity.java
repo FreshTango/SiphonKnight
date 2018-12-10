@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected Toast mainToast;
     MediaPlayer music;
     int menuSong;
-    private FirebaseAuth mAuth;
-    FirebaseUser currentUser;
+    public FirebaseAuth mAuth;
+    public FirebaseUser currentUser;
 
     protected void doToast(String message) {
         if (this.mainToast != null) {
@@ -58,9 +58,6 @@ public class MainActivity extends AppCompatActivity {
         }
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
-        if (currentUser != null){
-            mAuth.signOut();
-        }
         ImageButton login = (ImageButton)findViewById(R.id.signinbutton);
         login.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -81,13 +78,16 @@ public class MainActivity extends AppCompatActivity {
                     // XXX write a Toast to warn the user about empty names.
                     doToast("Please Sign in First");
                 }
-                else {
-                    doToast(currentUser.toString());
+                else if(currentUser.getMetadata().getCreationTimestamp() == currentUser.getMetadata().getLastSignInTimestamp()) {
+                    Intent myintent = new Intent(MainActivity.this, askname.class);
+                    startActivityForResult(myintent, 1);
+                }
+                else{
                     // XXX Launch TheGame activity
                     menuSong = 0;
-                    //String name = userNameEditText.getText().toString();
+                    String name = "nope";
                     Intent myintent = new Intent(MainActivity.this, WorldSelect.class);
-                    //myintent.putExtra("player", name);
+                    myintent.putExtra("player", name);
                     startActivityForResult(myintent, 1);
                 }
             }
