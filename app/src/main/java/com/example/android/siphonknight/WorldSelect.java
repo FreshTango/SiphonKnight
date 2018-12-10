@@ -19,7 +19,13 @@ public class WorldSelect extends MainActivity {
     private ListView lv;
     public static ArrayList<level> arrayList;
 
-    TrainingDummy train = new TrainingDummy();
+    TrainingDummy dummy = new TrainingDummy();
+    BanditCaptain bandit = new BanditCaptain();
+    BigSlime slime = new BigSlime();
+    StoneGolem golem = new StoneGolem();
+    EvilSnowman snowman = new EvilSnowman();
+    IcicleGuardian guardian = new IcicleGuardian();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +43,12 @@ public class WorldSelect extends MainActivity {
                 stringArray);
         lv.setAdapter(arrayAdapter);
         arrayList = new ArrayList<level>();
-        arrayList.add(new level("level 1", train));
-        arrayList.add(new level("level 2", train));
+        arrayList.add(new level("Level 1", dummy));
+        arrayList.add(new level("Level 2", bandit));
+        arrayList.add(new level("Level 3", slime));
+        arrayList.add(new level("Level 4", golem));
+        arrayList.add(new level("Level 5", snowman));
+        arrayList.add(new level("Level 6", guardian));
         music.stop();
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +30,7 @@ public class fight extends MainActivity {
     protected RoundCornerProgressBar playerHealthBar;
     protected Button attackButton;
     protected Button defenseButton;
+    protected ImageButton testImage;
     protected Button siphoningSlash;
     protected Button enragedFlurry;
     protected Button venomousStab;
@@ -75,35 +78,22 @@ public class fight extends MainActivity {
         maxPlayerHealthVal = findViewById(R.id.playerMaxHealthVal);
         attackVal = findViewById(R.id.attackVal);
         defenseVal = findViewById(R.id.defenseVal);
-
+        testImage = findViewById(R.id.imageViewTest);
         bossHealthBar = findViewById(R.id.bossHealthBar);
-        //bossHealthBar.setIconImageResource(R.drawable.hpicon);
         bossHealthBar.setProgressColor(Color.parseColor("#c83b3b"));
         bossHealthBar.setProgressBackgroundColor(Color.parseColor("#9d2e2e"));
-       // bossHealthBar.setIconBackgroundColor(Color.parseColor("#741515"));
-
         playerHealthBar = findViewById(R.id.playerHealthBar);
-        //playerHealthBar.setIconImageResource(R.drawable.hpicon);
         playerHealthBar.setProgressColor(Color.parseColor("#0ea65d"));
         playerHealthBar.setProgressBackgroundColor(Color.parseColor("#097240"));
-       // playerHealthBar.setIconBackgroundColor(Color.parseColor("#00502a"));
         attackButton = findViewById(R.id.attackButton);
         defenseButton = findViewById(R.id.defenseButton);
 
         // Abilities
-//        siphoningSlash = findViewById(R.id.siphoningSlash);
-//        enragedFlurry = findViewById(R.id.enragedFlurry);
-//        venomousStab = findViewById(R.id.venomousStab);
-//        sacrificialMight = findViewById(R.id.sacMight);
-//        sacrificialProtection = findViewById(R.id.sacProtect);
-//        reverseSweep = findViewById(R.id.reverseSweep);
-//        berserk = findViewById(R.id.berserk);
-//        vengeance = findViewById(R.id.vengeance);
-
         gameInit();
         levelInit();
         player.armorUpdate();
         player.weaponUpdate();
+        player.trinketUpdate();
 
         playerHealthBar.setMax(player.maxHealth);
         bossHealthBar.setMax(maxBossHealth);
@@ -136,7 +126,16 @@ public class fight extends MainActivity {
                 updateValues();
             }
             playerTurn = false;
+            testImage.setVisibility(View.VISIBLE);
             bossTurn();
+            }
+        });
+
+        testImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Toast.makeText(getApplicationContext(),
+                            "Test to click the thing", Toast.LENGTH_SHORT).show();
             }
         });
 

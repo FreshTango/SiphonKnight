@@ -1,14 +1,17 @@
 package com.example.android.siphonknight;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
+
+        RelativeLayout relativeLayout = findViewById(R.id.backgroundLayout);
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
         menuSong = 1;
         if (menuSong == 1) {
             music = MediaPlayer.create(getApplicationContext(), R.raw.menu01);
