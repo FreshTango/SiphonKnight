@@ -32,9 +32,9 @@ public class WorldSelect extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.world_select);
 
-        user = getIntent().getExtras().getString("name");
+        //user = getIntent().getExtras().getString("name");
         p.playerInit();
-        p.setName(user);
+        //p.setName(user);
         lv = (ListView) findViewById(R.id.stagelist);
         String[] stringArray = getResources().getStringArray(R.array.level_names);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(

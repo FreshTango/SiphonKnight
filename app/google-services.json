@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "379223689281",
+    "firebase_url": "https://siphonknight-3db8e.firebaseio.com",
+    "project_id": "siphonknight-3db8e",
+    "storage_bucket": "siphonknight-3db8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379223689281:android:7a389bc90926bd44",
+        "android_client_info": {
+          "package_name": "com.example.android.siphonknight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379223689281-hoj9bd26cr68ht0r99bt3at9i9prrl2f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.siphonknight",
+            "certificate_hash": "6e3ee654967c7f1ff1aeca74613dd6dc207cba98"
+          }
+        },
+        {
+          "client_id": "379223689281-cmtsf1876jfuufarp24arvck3dtoevfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDei8gZFPGfh___VG5COgaYSMRwD06Bs44"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379223689281-cmtsf1876jfuufarp24arvck3dtoevfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
