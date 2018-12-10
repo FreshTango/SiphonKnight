@@ -16,8 +16,8 @@ public class StoneGolem implements Boss {
     public StoneGolem() {
         health = 80;
         maxHealth = 80;
-        attack = 10;
-        defense = 30;
+        attack = 2;
+        defense = 5;
         canAttack = 0;
         turnCounter = 0;
     }

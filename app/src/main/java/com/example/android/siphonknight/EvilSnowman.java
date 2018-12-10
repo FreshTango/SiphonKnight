@@ -18,7 +18,7 @@ public class EvilSnowman implements Boss {
     public EvilSnowman() {
         health = 80;
         maxHealth = 80;
-        attack = 15;
+        attack = 2;
         defense = 10;
         canAttack = 0;
         turnCounter = 0;

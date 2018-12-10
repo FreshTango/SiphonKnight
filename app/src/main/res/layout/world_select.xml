@@ -1,26 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:id="@+id/backgroundLayout2"
+    android:background="@drawable/gradient_list"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Stage!"
-            android:id="@+id/stagetext"
-            android:layout_centerHorizontal="true"
-            android:textSize="36dp"/>
-
-        <ListView
-            android:id="@+id/stagelist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/stagetext" />
+        <ImageButton
+            android:id="@+id/logoutbutton"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="550dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/signoutbutton"
+            android:text="Sign in" />
 
     </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/level1button"
+        android:layout_width="800dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/level1"
+        />
+
+    <ImageButton
+        android:id="@+id/level2button"
+        android:layout_width="800dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/level2"
+        />
+
+    <ImageButton
+        android:id="@+id/level3button"
+        android:layout_width="800dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/level3"
+        />
+
+    <ImageButton
+        android:id="@+id/level4button"
+        android:layout_width="800dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/level4"
+        />
+
+    <ImageButton
+        android:id="@+id/level5button"
+        android:layout_width="800dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/level5"
+        />
+
+    <ImageButton
+        android:id="@+id/level6button"
+        android:layout_width="800dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/level6"
+        />
+</RelativeLayout>

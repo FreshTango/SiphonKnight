@@ -5,8 +5,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.siphonknight.fight"
-    android:background="@drawable/grassfield">
+    android:id="@+id/backgroundLayout3"
+    android:background="@drawable/gradient_list"
+    tools:context="com.example.android.siphonknight.fight">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/elvforest"/>
+
+    <ImageView
+        android:id="@+id/bossSprite"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/dummy"/>
+
+    <ImageView
+        android:id="@+id/playerSprite"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="35dp"
+        android:background="@drawable/player"/>
+
+    <ImageButton
+        android:id="@+id/victorySign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:visibility="invisible"
+        android:background="@drawable/victory" />
+
+    <ImageButton
+        android:id="@+id/gameoverSign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:visibility="invisible"
+        android:background="@drawable/gameover" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,13 +63,6 @@
             app:rcRadius="10dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"/>
-
-        <ImageButton
-            android:id="@+id/imageViewTest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/bossicon" />
 
 
     </LinearLayout>
@@ -72,6 +104,7 @@
         android:layout_marginTop="440dp"
         android:layout_marginLeft="75dp"
         android:textSize="15dp"
+        android:visibility="invisible"
         android:text="ATK:"/>
     <TextView
         android:id="@+id/attackVal"
@@ -80,6 +113,7 @@
         android:layout_marginTop="430dp"
         android:layout_marginLeft="135dp"
         android:textSize="25dp"
+        android:visibility="invisible"
         android:text="0"/>
     <TextView
         android:layout_width="100dp"
@@ -87,6 +121,7 @@
         android:layout_marginTop="440dp"
         android:layout_marginLeft="220dp"
         android:textSize="15dp"
+        android:visibility="invisible"
         android:text="DEF:"/>
     <TextView
         android:id="@+id/defenseVal"
@@ -95,34 +130,8 @@
         android:layout_marginTop="430dp"
         android:layout_marginLeft="285dp"
         android:textSize="25dp"
+        android:visibility="invisible"
         android:text="0"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="150dp"
-        android:text="Boss Level: "/>
-    <TextView
-        android:id="@+id/bossLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="250dp"
-        android:text="1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="150dp"
-        android:text="Player Level: "/>
-    <TextView
-        android:id="@+id/playerLevel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="250dp"
-        android:text="1"/>
     <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
         android:id="@+id/playerHealthBar"
         android:layout_height="50dp"
@@ -169,7 +178,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="600dp"
         android:text="ATTACK"
         android:textSize="10dp" />
 
@@ -178,16 +187,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginLeft="225dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="600dp"
         android:text="DEFEND"
-        android:textSize="10dp" />
-
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="595dp"
-        android:text="RESET BOSS RUSH"
         android:textSize="10dp" />
 </RelativeLayout>

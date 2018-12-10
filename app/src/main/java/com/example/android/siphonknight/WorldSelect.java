@@ -2,6 +2,7 @@ package com.example.android.siphonknight;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,7 +11,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,30 +33,92 @@ public class WorldSelect extends MainActivity {
     public Player p;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
-    private ListView lv;
+    protected ImageButton oneButton;
+    protected ImageButton twoButton;
+    protected ImageButton threeButton;
+    protected ImageButton fourButton;
+    protected ImageButton fiveButton;
+    protected ImageButton sixButton;
+
     public static ArrayList<level> arrayList;
 
     private DocumentReference mDocRef;
     String uid;
-    TrainingDummy dummy = new TrainingDummy();
-    BanditCaptain bandit = new BanditCaptain();
-    BigSlime slime = new BigSlime();
-    StoneGolem golem = new StoneGolem();
-    EvilSnowman snowman = new EvilSnowman();
-    IcicleGuardian guardian = new IcicleGuardian();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.world_select);
-        /*
-        if (currentUser == null){
-            doToast("thefuck");
-        }
-        else{
-            doToast(currentUser.toString());
-        }*/
+
+        RelativeLayout relativeLayout = findViewById(R.id.backgroundLayout2);
+        AnimationDrawable animationDrawable = (AnimationDrawable) relativeLayout.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(4000);
+        animationDrawable.start();
+
+        oneButton = (ImageButton) findViewById(R.id.level1button);
+        twoButton = (ImageButton) findViewById(R.id.level2button);
+        threeButton = (ImageButton) findViewById(R.id.level3button);
+        fourButton = (ImageButton) findViewById(R.id.level4button);
+        fiveButton = (ImageButton) findViewById(R.id.level5button);
+        sixButton = (ImageButton) findViewById(R.id.level6button);
+
+        oneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(WorldSelect.this, fight.class);
+                myintent.putExtra("boss", "dummy");
+                startActivity(myintent);
+
+            }
+        });
+        twoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(WorldSelect.this, fight.class);
+                myintent.putExtra("boss", "bandit");
+                startActivity(myintent);
+
+            }
+        });
+        threeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(WorldSelect.this, fight.class);
+                myintent.putExtra("boss", "slime");
+                startActivity(myintent);
+
+            }
+        });
+        fourButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(WorldSelect.this, fight.class);
+                myintent.putExtra("boss", "golem");
+                startActivity(myintent);
+
+            }
+        });
+        fiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(WorldSelect.this, fight.class);
+                myintent.putExtra("boss", "snowman");
+                startActivity(myintent);
+
+            }
+        });
+        sixButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myintent = new Intent(WorldSelect.this, fight.class);
+                myintent.putExtra("boss", "guardian");
+                startActivity(myintent);
+
+            }
+        });
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -72,34 +138,15 @@ public class WorldSelect extends MainActivity {
         else{
              loadPlayer();
         }
-        lv = (ListView) findViewById(R.id.stagelist);
-        String[] stringArray = getResources().getStringArray(R.array.level_names);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                stringArray);
-        lv.setAdapter(arrayAdapter);
-        arrayList = new ArrayList<level>();
-        arrayList.add(new level("Level 1", dummy));
-        arrayList.add(new level("Level 2", bandit));
-        arrayList.add(new level("Level 3", slime));
-        arrayList.add(new level("Level 4", golem));
-        arrayList.add(new level("Level 5", snowman));
-        arrayList.add(new level("Level 6", guardian));
-        music.stop();
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //need to figure out how to keep information
-                Intent myintent = new Intent(WorldSelect.this, fight.class);
-                startActivityForResult(myintent, 1);
-            }
-        });
-        Button logout = (Button)(findViewById(R.id.logoutbutton));
+        ImageButton logout = (ImageButton)(findViewById(R.id.logoutbutton));
         logout.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 mAuth.signOut();
+                Intent myintent = new Intent(WorldSelect.this, MainActivity.class);
+                startActivity(myintent);
             }
+
+
         });
     }
 

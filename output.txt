@@ -1,0 +1,50 @@
+      31 text files.
+classified 31 files      30 unique files.                              
+       1 file ignored.
+
+http://cloc.sourceforge.net v 1.60  T=1.97 s (15.2 files/s, 884.6 lines/s)
+-------------------------------------------------------------------------------------------------------------------------
+File                                                                                  blank        comment           code
+-------------------------------------------------------------------------------------------------------------------------
+app/src/main/java/com/example/android/siphonknight/fight.java                            27             11            195
+app/src/main/res/layout/fight.xml                                                        15              0            178
+app/src/main/res/drawable/ic_launcher_background.xml                                      0              0            170
+app/src/main/java/com/example/android/siphonknight/WorldSelect.java                      16              8            151
+app/src/main/java/com/example/android/siphonknight/Player.java                           21             16            119
+app/src/main/java/com/example/android/siphonknight/MainActivity.java                     17              9            101
+app/src/main/java/com/example/android/siphonknight/IcicleGuardian.java                    8              3             55
+app/src/main/java/com/example/android/siphonknight/LevelAdapter.java                     15              0             50
+app/src/main/java/com/example/android/siphonknight/StoneGolem.java                        8              3             50
+app/src/main/java/com/example/android/siphonknight/EvilSnowman.java                       8              3             49
+app/src/main/res/layout/mainactivity.xml                                                  2              0             40
+app/src/main/res/layout/askname.xml                                                       4              0             39
+app/src/main/java/com/example/android/siphonknight/askname.java                           6              2             38
+app/src/main/java/com/example/android/siphonknight/BanditCaptain.java                     6              3             37
+app/src/main/java/com/example/android/siphonknight/BigSlime.java                          6              3             37
+app/src/main/res/drawable-v24/ic_launcher_foreground.xml                                  0              0             34
+app/src/main/java/com/example/android/siphonknight/TrainingDummy.java                     6              3             30
+app/src/main/AndroidManifest.xml                                                          3              0             21
+app/src/main/java/com/example/android/siphonknight/level.java                             6              0             21
+app/src/main/res/layout/world_select.xml                                                  5              0             21
+app/src/main/res/drawable/gradient_list.xml                                               0              0              9
+app/src/main/res/drawable/gradient_2.xml                                                  0              0              7
+app/src/main/res/drawable/gradient_3.xml                                                  0              0              7
+app/src/main/res/drawable/gradient_1.xml                                                  0              0              7
+app/src/main/res/values/levels.xml                                                        0              0              7
+app/src/main/res/values/colors.xml                                                        0              0              6
+app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml                                  0              0              5
+app/src/main/res/values/styles.xml                                                        2              1              4
+app/src/main/java/com/example/android/siphonknight/Boss.java                              2              0              4
+app/src/main/res/values/strings.xml                                                       0              0              3
+-------------------------------------------------------------------------------------------------------------------------
+SUM:                                                                                    183             65           1495
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                            14            152             64            937
+XML                             16             31              1            558
+-------------------------------------------------------------------------------
+SUM:                            30            183             65           1495
+-------------------------------------------------------------------------------

@@ -19,7 +19,7 @@ public class IcicleGuardian implements Boss {
     public IcicleGuardian() {
         health = 125;
         maxHealth = 125;
-        attack = 20;
+        attack = 2;
         defense = 12;
         canAttack = 0;
         turnCounter = 0;

@@ -16,7 +16,7 @@ public class BigSlime implements Boss {
     public BigSlime() {
         health = 50;
         maxHealth = 50;
-        attack = 6;
+        attack = 3;
         defense = 3;
         turnCounter = 1;
     }

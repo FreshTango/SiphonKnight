@@ -15,7 +15,7 @@ public class BanditCaptain implements Boss {
     public BanditCaptain() {
         health = 40;
         maxHealth = 40;
-        attack = 8;
+        attack = 3;
         defense = 1;
         canAttack = 0;
     }
